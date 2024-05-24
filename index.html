@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>タイトル</title>
+    <meta
+      name="description"
+      content="テキストテキストテキストテキストテキストテキスト"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="content">
+      <h1 class="page-title">セミナー お申込みフォーム</h1>
+      <form action="#">
+        <dl class="form-area">
+          <dt><label for="name">名前</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="name" name="your-name" />
+            <p id="name-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="tel1">電話番号</label><span>必須</span></dt>
+          <dd>
+            <input type="text" id="tel1" name="your-tel1" /> -
+            <input type="text" id="tel2" name="your-tel2" /> -
+            <input type="text" id="tel3" name="your-tel3" />
+            <p id="tel-error" class="error-text"></p>
+          </dd>
+
+          <dt><label for="reservation">予約日</label><span>必須</span></dt>
+          <dd>
+            <input type="text" /> 13時 ～ 14時
+            <p id="reservation-error" class="error-text"></p>
+          </dd>
+        </dl>
+
+        <div class="button-area">
+          <button id="submit-button" type="button" value="">
+            上記の内容で申し込む
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

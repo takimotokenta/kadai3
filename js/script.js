@@ -34,5 +34,25 @@ $(function () {
       // エラーメッセージをセット
       $("#reservation-error").text("予約日は必須項目です。");
     }
+
+    // 受講形式が未入力の場合
+    const lesson = $('[name="your-lesson"]:checked').length;
+    if (lesson === 0) {
+      $("#lesson-error").text("受講形式は必須項目です。");
+    }
+
   });
 });
+
+$(function() {
+  $('[name="your-lesson"]:radio').change( function() {
+    if($('[id=online]').prop('checked')){
+      $('.add').fadeOut();
+      $('.add-online').fadeIn();
+    } else if ($('[id=floor]').prop('checked')) {
+      $('.add').fadeOut();
+      $('.add-floor').fadeIn();
+    } 
+  });
+});
+
